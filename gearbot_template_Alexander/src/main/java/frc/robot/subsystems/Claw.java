@@ -4,8 +4,11 @@
 
 package frc.robot.subsystems;
 
+//import com.ctre.phoenix.motorcontrol.can.TalonFX;
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonFX;
+
 import edu.wpi.first.wpilibj.DigitalInput;
-import edu.wpi.first.wpilibj.motorcontrol.Victor;
+//import edu.wpi.first.wpilibj.motorcontrol.Victor;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
@@ -14,7 +17,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
  * motors, you should probably use a sensor so that the motors don't stall.
  */
 public class Claw extends SubsystemBase {
-  private final Victor m_motor = new Victor(7);
+  private final WPI_TalonFX m_motor = new WPI_TalonFX(7);
   private final DigitalInput m_contact = new DigitalInput(5);
 
   /** Create a new claw subsystem. */
